@@ -1,0 +1,19 @@
+{
+  "presets": ["es2015", "react"],
+  "env": {
+    // this plugin will be included only in development mode
+    "development": {
+      "plugins": [
+        // must be an array with options object as second item
+        ["react-transform", {
+          // must be an array of objects
+          "transforms": [{
+            "transform": "react-transform-hmr",
+            "imports": ["react"],
+            "locals": ["module"]
+          }]
+        }]
+      ]
+    }
+  }
+}
