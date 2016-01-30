@@ -15,6 +15,12 @@ module.exports = {
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new ExtractTextPlugin('css/app.css'),
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('development'),
+          'DEVTOOLS': JSON.stringify('disabled')
+        }
+      }),
       new CopyWebpackPlugin([
         { from: './index.html', to: './index.html' },
         { from: './index.html', to: './404.html' }

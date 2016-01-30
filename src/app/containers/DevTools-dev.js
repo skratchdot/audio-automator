@@ -6,7 +6,9 @@ import LogMonitor from 'redux-devtools-log-monitor';
 
 // createDevTools takes a monitor and produces a DevTools component
 const DevTools = createDevTools(
-  <FilterMonitor>
+  <FilterMonitor blacklist={[
+    'SET_NOW'
+  ]}>
     <DockMonitor
       toggleVisibilityKey="ctrl-h"
       changePositionKey="ctrl-q"

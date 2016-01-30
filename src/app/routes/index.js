@@ -7,16 +7,14 @@ const packageInfo = require('../../../package.json');
 import NotFound from '../pages/NotFound';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Counter from '../pages/Counter';
-import Echo from '../pages/Echo';
+import Demo from '../pages/Demo';
 
 const routes = (
 	<Route component={App}>
 		<Route path={`/${packageInfo.name}`} component={Home} />
 		<Route path={`/${packageInfo.name}/home`} component={Home} />
 		<Route path={`/${packageInfo.name}/about`} component={About} />
-		<Route path={`/${packageInfo.name}/counter`} component={Counter} />
-		<Route path={`/${packageInfo.name}/echo(/:echo)`} component={Echo} />
+		<Route path={`/${packageInfo.name}/demo`} component={Demo} />
 		<Route path="*" component={NotFound} />
 	</Route>
 );

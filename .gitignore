@@ -32,3 +32,4 @@ coverage/
 
 # ignores specific to this repo
 build/dev
+transpiled/*
