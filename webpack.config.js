@@ -6,6 +6,7 @@ module.exports = {
     context: `${__dirname}/src/app`,
     entry: {
       'js/app.js': ['./index.js'],
+      'js/AudioAutomator.js': ['../lib/window.AudioAutomator.js'],
       'css/app.css': ['./styles/app.less']
     },
     output: {
